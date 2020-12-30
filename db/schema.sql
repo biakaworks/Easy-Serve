@@ -1,0 +1,9 @@
+DROP DATABASE IF EXISTS easy_serve_db;
+CREATE DATABASE easy_serve_db;
+USE easy_serve_db;
+
+CREATE TABLE food (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(45) NOT NULL,  
+);
+
