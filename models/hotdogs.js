@@ -27,6 +27,10 @@ module.exports = function (sequelize, DataTypes) {
     meat: {
         type: DataTypes.STRING,
         allowNull: false
+      },
+    sauce: {
+        type: DataTypes.STRING,
+        allowNull: false
       }
   });
  
