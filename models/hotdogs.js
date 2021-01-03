@@ -26,7 +26,15 @@ module.exports = function (sequelize, DataTypes) {
         defautl: 1,
         allowNull: false
       }});
- 
-  
+`` 
+Hotdog.associate = function(models) {
+  // We're saying that a Post should belong to an Author
+  // A Post can't be created without an Author due to the foreign key constraint
+  Hotdog.belongsTo(models.Table, {
+    foreignKey: {
+      allowNull: false
+    }
+  });
+};
   return Hotdog;
 };
