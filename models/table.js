@@ -27,8 +27,16 @@ module.exports = function (sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       }
+
+      
   });
- 
+  Table.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Table.hasMany(models.Hotdog, {
+      onDelete: "cascade"
+    });
+  };
   
   return Table;
 };
