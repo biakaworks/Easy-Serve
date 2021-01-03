@@ -8,22 +8,22 @@ module.exports = function (sequelize, DataTypes) {
       },
     buns: {
       type: Datatypes.BOOLEAN,
-      default: true,
+      default: 1,
       allowNull: false,
     },
     toppings: {
         type: DataTypes.BOOLEAN,
-        default: true,
+        default: 1,
         allowNull: false
       },
     meat: {
         type: DataTypes.BOOLEAN,
-        default: true,
+        default: 1,
         allowNull: false
       },
     sauce: {
         type: DataTypes.BOOLEAN,
-        defautl: true,
+        defautl: 1,
         allowNull: false
       }});
  
