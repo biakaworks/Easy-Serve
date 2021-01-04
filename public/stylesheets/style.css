@@ -1,4 +1,16 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+body{
+  background-color: #ff8a80;
+  width: auto;
+}
+
+.card{
+  background-color: antiquewhite;
+  width: auto;
+}
+.order{
+  background-color: #02be76;
+}
+
+.tableStatus{
+  background-color: #00ff89;
 }
