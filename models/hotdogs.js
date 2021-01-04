@@ -6,11 +6,14 @@ module.exports = function (sequelize, DataTypes) {
     hotdogName: {
       type: DataTypes.STRING,
       },
-    buns: {
-      type: Datatypes.BOOLEAN,
-      default: 1,
-      allowNull: false,
-    },
+      bun: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+        validate: {
+          isBoolean: true
+        }
+      },
     toppings: {
         type: DataTypes.BOOLEAN,
         default: 1,
@@ -26,7 +29,6 @@ module.exports = function (sequelize, DataTypes) {
         defautl: 1,
         allowNull: false
       }});
-`` 
 Hotdog.associate = function(models) {
   // We're saying that a Post should belong to an Author
   // A Post can't be created without an Author due to the foreign key constraint
