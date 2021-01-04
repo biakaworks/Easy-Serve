@@ -2,7 +2,6 @@ DROP DATABASE IF EXISTS easy_serve_db;
 CREATE DATABASE easy_serve_db;
 USE easy_serve_db;
 
-
 CREATE TABLE products (
   hotdogName Andy Secular,
   hotdogName The Burner,
