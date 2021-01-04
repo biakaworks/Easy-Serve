@@ -8,25 +8,33 @@ module.exports = function (sequelize, DataTypes) {
       },
     buns: {
       type: Datatypes.BOOLEAN,
-      default: true,
+      default: 1,
       allowNull: false,
     },
     toppings: {
         type: DataTypes.BOOLEAN,
-        default: true,
+        default: 1,
         allowNull: false
       },
     meat: {
         type: DataTypes.BOOLEAN,
-        default: true,
+        default: 1,
         allowNull: false
       },
     sauce: {
         type: DataTypes.BOOLEAN,
-        defautl: true,
+        defautl: 1,
         allowNull: false
       }});
- 
-  
+`` 
+Hotdog.associate = function(models) {
+  // We're saying that a Post should belong to an Author
+  // A Post can't be created without an Author due to the foreign key constraint
+  Hotdog.belongsTo(models.Table, {
+    foreignKey: {
+      allowNull: false
+    }
+  });
+};
   return Hotdog;
 };
