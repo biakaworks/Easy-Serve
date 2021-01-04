@@ -1,35 +1,40 @@
 // Requiring bcrypt for password hashing. Using the bcryptjs version as the regular bcrypt module sometimes causes errors on Windows machines
 const bcrypt = require('bcryptjs');
-// Creating our User model
+// Creating our Hotdog Menu and Options
 module.exports = function (sequelize, DataTypes) {
   const Hotdog = sequelize.define('Hotdog', {
-    // The email cannot be null, and must be a proper email before creation
     hotdogName: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true
-      }
-    },
-    // The password cannot be null
+      },
     buns: {
-      type: Sequelize.BOOLEAN,
-      default:1,
-      allowNull: false
+      type: Datatypes.BOOLEAN,
+      default: 1,
+      allowNull: false,
     },
-    // The password cannot be null
     toppings: {
-        type: DataTypes.STRING,
+        type: DataTypes.BOOLEAN,
+        default: 1,
         allowNull: false
       },
-      // The password cannot be null
     meat: {
-        type: DataTypes.STRING,
+        type: DataTypes.BOOLEAN,
+        default: 1,
         allowNull: false
-      }
+      },
+    sauce: {
+        type: DataTypes.BOOLEAN,
+        defautl: 1,
+        allowNull: false
+      }});
+`` 
+Hotdog.associate = function(models) {
+  // We're saying that a Post should belong to an Author
+  // A Post can't be created without an Author due to the foreign key constraint
+  Hotdog.belongsTo(models.Table, {
+    foreignKey: {
+      allowNull: false
+    }
   });
- 
-  
+};
   return Hotdog;
 };
