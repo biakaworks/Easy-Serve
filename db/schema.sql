@@ -1,34 +1,8 @@
-DROP DATABASE IF EXISTS easy_serve_db;
-CREATE DATABASE easy_serve_db;
+INSERT INTO Tables (tableNumber, drinks, sides, icecream, createdAt, updatedAt)
+VALUES ("1","Pepsi","fries", "vanilla", "2018-08-18 03:44:46", "2018-08-18 03:44:46");
 
+INSERT INTO Hotdogs (hotdogName, bun, toppings, meat, sauce, TableId, createdAt, updatedAt)
+VALUES ("Chihuahua", 1, 1, 1, 1, 1, "2018-08-18 03:44:46", "2018-08-18 03:44:46");
 
-CREATE TABLE products (
-  hotdogName Andy Secular,
-  hotdogName The Burner,
-  hotdogName Philly Steak,
-  hotdogName Chihuahua,
-  hotdogName BLT Dog,
-  hotdogName Kitchen Sink,
-  hotdogName Bio Diesel,
-  hotdogName Corn Dog,
-  hotdogName Meat Candy,
-  drinkName Coke Cola,
-  drinkName Dr Pepper,
-  drinkName Sprite,
-  drinkName Diet Coke,
-  drinkName Diet Sprite,
-  drinkName Water,
-  sidesName French Fries,
-  sidesName Cajun Gumbo Fries,
-  sidesName Sweet Potato Fries,
-  sidesName Kimchi,
-  icecreamName Vanilla,
-  icecreamName Chocolate,
-  icecreamName Strawberry,
-);
-CREATE TABLE hotdog ingredients(
-  ingredientName bun,
-  ingredientName toppings,
-  ingredientName meat,
-  ingredientName sauce,
-);
+INSERT INTO (flavor)
+VALUES ("strawberry");
