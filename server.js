@@ -2,11 +2,11 @@
 require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
-const session = require('express-session');
+// const session = require('express-session');
 const helmet = require('helmet');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 // Requiring passport as we've configured it
-const passport = require('./config/passport');
+// const passport = require('./config/passport');
 const routes = require('./routes');
 
 // Setting up port and requiring models for syncing

@@ -43,5 +43,4 @@ router.get('/table6', (_req, res) => {
   res.sendFile(path.join(__dirname, '../public/table6.html'));
 });
 
-
 module.exports = router;
