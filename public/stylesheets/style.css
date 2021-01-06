@@ -1,6 +1,9 @@
 body{
-  background-color: #ff8a80;
+  background-color: #bdbdbd;
   width: auto;
+}
+.btn{
+  background-color: #4db6ac;
 }
 
 .card{
@@ -11,6 +14,18 @@ body{
   background-color: #02be76;
 }
 
-.tableStatus{
+.tableStatusOpen{
   background-color: #00ff89;
 }
+
+.tableStatusClosed{
+  background-color: #e7646d;
+}
+
+.modal{
+  background-color: #9e9e9e;
+}
+#navbarNav{
+  background-color: red !important;
+}
+

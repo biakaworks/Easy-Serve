@@ -33,16 +33,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 // We need to use sessions to keep track of our user's login status
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: true,
-    saveUninitialized: true
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(morgan('tiny'));
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: true,
+//     saveUninitialized: true
+//   })
+// );
+// app.use(passport.initialize());
+// app.use(passport.session());
+// app.use(morgan('tiny'));
 
 // Requiring our routes
 app.use(routes);
