@@ -2,11 +2,11 @@
 require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
-const session = require('express-session');
+// const session = require('express-session');
 const helmet = require('helmet');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 // Requiring passport as we've configured it
-const passport = require('./config/passport');
+// const passport = require('./config/passport');
 const routes = require('./routes');
 
 // Setting up port and requiring models for syncing
@@ -33,16 +33,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 // We need to use sessions to keep track of our user's login status
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: true,
-    saveUninitialized: true
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(morgan('tiny'));
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: true,
+//     saveUninitialized: true
+//   })
+// );
+// app.use(passport.initialize());
+// app.use(passport.session());
+// app.use(morgan('tiny'));
 
 // Requiring our routes
 app.use(routes);
