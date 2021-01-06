@@ -7,8 +7,10 @@
     "test": "npm run lint",
     "start": "node server.js",
     "lint": "semistandard --verbose | snazzy",
+    "lint:fix": "semistandard --fix",
     "format": "prettier-semi --write '**/*.js'",
     "watch": "nodemon server.js"
+    
   },
   "keywords": [],
   "author": "",
