@@ -1,8 +1,2 @@
-INSERT INTO food (flavor)
-VALUES ("vanilla");
-
-INSERT INTO  (flavor)
-VALUES ("chocolate");
-
-INSERT INTO (flavor)
-VALUES ("strawberry");
+DROP DATABASE IF EXISTS easy_serve;
+CREATE DATABASE easy_serve;

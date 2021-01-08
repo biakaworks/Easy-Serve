@@ -39,4 +39,40 @@ router.get('/user_data', (req, res) => {
   res.json(user);
 });
 
+// Add sequelize code to get all food and return them as JSON
+router.get('/tables', async (req, res) => {
+  const hotdog = await db.Hotdog.findAll({});
+  res.json(hotdog);
+});
+router.post('/tables', async function (req, res) {
+  const newTable = await db.Table.create(req.body);
+  res.json(newTable);
+});
+
+router.delete('/hotDogs/:id', async (req, res) => {
+  const option = {
+    where: {
+      id: req.params.id
+    }
+  };
+  await db.Hotdog.destroy(option);
+  res.end();
+});
+
+// Add sequelize code to get a specific food and return it as JSON
+router.get('/:food', async (req, res) => {
+  const selectItem = await db.Table.findOne({
+    where: {
+      id: req.params.food
+    }
+  });
+  res.json(selectItem);
+});
+
+// POST route for saving a food. We can create food with the data in req.body
+router.post('/hotDogs', async function (req, res) {
+  const newHotDog = await db.Hotdog.create(req.body);
+  res.json(newHotDog);
+});
+
 module.exports = router;

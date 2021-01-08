@@ -7,6 +7,7 @@
     "test": "npm run lint",
     "start": "node server.js",
     "lint": "semistandard --verbose | snazzy",
+    "lint:fix": "semistandard --fix",
     "format": "prettier-semi --write '**/*.js'",
     "watch": "nodemon server.js"
   },
@@ -20,6 +21,7 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "helmet": "^4.2.0",
+    "materialize-css": "^1.0.0",
     "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
@@ -30,5 +32,10 @@
     "prettier-semi-cli": "^1.0.0",
     "semistandard": "^16.0.0",
     "snazzy": "^9.0.0"
+  },
+  "semistandard": {
+    "globals": [
+      "$"
+    ]
   }
 }
